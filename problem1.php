@@ -1,11 +1,9 @@
 <?php
 function traverseArray($data, $depth){
 	foreach($data as $key => $value){
+		echo "$key $depth<br />\n";			
 		if(is_array($value)){
-			echo "$key $depth<br />\n";
 			traverseArray($value,$depth+1);
-		}else{
-			echo "$key $depth<br />\n";
 		}
 	}
 }
