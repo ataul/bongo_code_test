@@ -1,5 +1,4 @@
 <?php
-
 class Person {
 	public function __construct($first_name, $last_name, $father) {
 		$this->first_name = $first_name;
@@ -22,10 +21,7 @@ $a = array (
 
 function traverseData($data, $depth){
 	foreach($data as $key => $value){
-		//use following line if viewed in browser
-		//echo "$key $depth<br />";
-		//following line is applicable for console
-		echo "$key $depth\n";			
+		echo "$key $depth<br />";			
 		if(is_array($value)){
 			traverseData($value,$depth+1);
 		}else if(is_object($value)){
@@ -33,9 +29,8 @@ function traverseData($data, $depth){
 		}
 	}
 }
-function printDepth($data) {
+function printDepth2($data) {
 	traverseData($data,1);	
 }
-//uncomment following line to view the output
-//printDepth($a);
+printDepth2($a);
 ?>
