@@ -42,6 +42,6 @@ $six	= new Node(6,$three);
 $seven	= new Node(7,$three);
 $eight	= new Node(8,$four);
 $nine	= new Node(9,$four);
-
-lca($six,$seven);
+//uncomment following line to view the output
+//lca($six,$seven);
 ?>

@@ -1,7 +1,10 @@
 <?php
 function traverseArray($data, $depth){
 	foreach($data as $key => $value){
-		echo "$key $depth<br />\n";			
+		//use following line if viewed in browser
+		//echo "$key $depth<br />";
+		//following line is applicable for console
+		echo "$key $depth\n";			
 		if(is_array($value)){
 			traverseArray($value,$depth+1);
 		}
@@ -12,13 +15,14 @@ function printDepth($data) {
 	
 }
 $a = array (
-"key1" => 1,
-"key2" => array (
-"key3" => 1,
-"key4" => array (
-"key5" => 4
-),
-),
+	"key1" => 1,
+	"key2" => array (
+		"key3" => 1,
+		"key4" => array (
+			"key5" => 4
+		),
+	),
 );
-printDepth($a);
+//uncomment following line to view the output
+//printDepth($a); 
 ?>
