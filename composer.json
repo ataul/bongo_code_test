@@ -2,9 +2,6 @@
     "require": {
         "phpspec/phpspec": "^5.1"
     },
-    "config": {
-        "bin-dir": "bin"
-    },
     "autoload": {
         "psr-0": {
             "": "src/"
